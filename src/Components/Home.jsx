@@ -1,0 +1,24 @@
+import React, { useState } from 'react'
+import SearchbarDropdown from './Search/SearchbarDropDown';
+import { defaultOptions } from '../data/mockData';
+
+function Home() {
+  const [options, setOptions] = useState([]);
+  const onInputChange = (event) => {
+    setOptions(
+      defaultOptions.filter((option) => option.includes(event.target.value))
+    );
+  };
+
+  return (
+    <>
+      <h1>Find shortest path between 2 MRT stations</h1>
+      <SearchbarDropdown options={options} onInputChange={onInputChange} where={"From"} />
+      <SearchbarDropdown options={options} onInputChange={onInputChange} where={"To"} />
+      <br />
+      <button className="btn btn-primary">Search</button>
+    </>
+  )
+}
+
+export default Home
