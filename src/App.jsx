@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { mrtStationNames, dummy, dummyParsed } from "./data.js";
 
 const SearchbarDropdown = (props) => {
   const { options, onInputChange } = props;
@@ -47,10 +48,9 @@ const SearchbarDropdown = (props) => {
 };
 
 const defaultOptions = [];
-for (let i = 0; i < 10; i++) {
-  defaultOptions.push(`option ${i}`);
-  defaultOptions.push(`suggesstion ${i}`);
-  defaultOptions.push(`advice ${i}`);
+const len = mrtStationNames.length;
+for (var i = 0; i < len; i++)  {
+  defaultOptions.push(mrtStationNames[i].mrt_station_english);
 }
 
 function App() {
