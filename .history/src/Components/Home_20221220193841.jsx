@@ -6,7 +6,7 @@ function Home() {
   const [options, setOptions] = useState([]);
   const onInputChange = (event) => {
     setOptions(
-      mrtStationNames.filter((option) => option.includes(event.target.value))
+      mrtStationNames.filter((option) => option.toLowerCase().includes(event.target.value.toLowerCase()))
     );
   };
 
