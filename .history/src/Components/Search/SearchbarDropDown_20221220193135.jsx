@@ -14,7 +14,7 @@ const SearchbarDropdown = (props) => {
     document.addEventListener('click', (event) => {
       ulRef.current.style.display = 'none';
     });
-  }, [onInputChange]);
+  }, []);
 
   return (
     <div className="search-bar-dropdown">
