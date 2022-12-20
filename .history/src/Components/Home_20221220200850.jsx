@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import SearchbarDropdown from './Search/SearchbarDropDown';
-import { defaultOptions } from '../data/data';
+import { defaultOptions as mrtStationNames } from '../data/data';
 
 function Home() {
   const [options, setOptions] = useState([]);
   const onInputChange = (event) => {
     setOptions(
-      defaultOptions.filter((option) => option.toLowerCase().includes(event.target.value.toLowerCase()))
+      mrtStationNames.filter((option.toLowerCase().includes(event.target.value.toLowerCase())))
     );
   };
 
