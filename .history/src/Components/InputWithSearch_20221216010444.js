@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import './inputSearch.css';
-import { mrtStationNames } from "./data.js";
 
 function InputWIthSearch(){
     const [val,setVal]=useState('')
@@ -17,7 +16,10 @@ function InputWIthSearch(){
         <div className="main">
             <input list="data" onChange={(e)=>setVal(e.target.value)} placeholder="Choose starting station" />
             <datalist id="data">
-                {mrtStationNames}
+                {/* <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option> */}
                 {data.map((op)=><option>{op}</option>)}
             </datalist>
 

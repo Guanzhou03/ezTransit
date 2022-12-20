@@ -3,6 +3,7 @@ import Home from './Components/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { mrtStationNames, dummy, dummyParsed } from "./data.js";
 
 function App() {
   return (
